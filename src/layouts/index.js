@@ -4,7 +4,7 @@ import config from '../utils/siteConfig'
 import globals from '../styles/global'
 import theme from '../styles/theme'
 import Menu from '../components/menu'
-import Footer from '../components/footer'
+import Footer from '../components/Footer';
 import favicon from '../images/favicon.ico'
 
 const Template = ({ children }) => {
