@@ -7,3 +7,5 @@ yarn-error.log
 npm-debug.log
 package-lock.json
 .contentful.json
+semantic/dist/**
+!semantic/dist/semantic.min.css
