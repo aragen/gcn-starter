@@ -1,6 +1,5 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import styled, {ThemeProvider} from "styled-components"
 import config from '../utils/siteConfig'
 import globals from '../styles/global'
 import theme from '../styles/theme'
@@ -26,13 +25,10 @@ const Template = ({ children }) => {
           <meta property="og:url" content={config.siteUrl + config.pathPrefix}/>
         </Helmet>
 
-        <ThemeProvider theme={theme}>
-          <div>
-            <Menu/>
-            {children()}
-            <Footer/>
-          </div>
-        </ThemeProvider>
+        <div>
+          {children()}
+          <Footer/>
+        </div>
 
       </div>
     )
