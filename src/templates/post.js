@@ -4,9 +4,9 @@ import Img from 'gatsby-image'
 import find from "lodash.find"
 import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
-import Hero from '../components/hero'
-import Tags from '../components/tags'
-import Body from '../components/body'
+import Hero from '../components/Hero'
+import Tags from '../components/Tags'
+import Body from '../components/Body'
 
 const PostTemplate = ({data}) => {
 
