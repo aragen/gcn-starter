@@ -3,9 +3,11 @@ import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
 import globals from '../styles/global'
 import theme from '../styles/theme'
-import Menu from '../components/menu'
+import Menu from '../components/Menu'
 import Footer from '../components/Footer';
 import favicon from '../images/favicon.ico'
+
+import { Container } from 'semantic-ui-react'
 
 import '../../semantic/dist/semantic.min.css';
 
@@ -27,10 +29,10 @@ const Template = ({ children }) => {
           <meta property="og:url" content={config.siteUrl + config.pathPrefix}/>
         </Helmet>
 
-        <div>
+        <Container text>
           {children()}
           <Footer/>
-        </div>
+        </Container>
 
       </div>
     )
