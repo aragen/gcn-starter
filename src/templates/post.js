@@ -6,7 +6,7 @@ import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
 import Hero from '../components/Hero'
 import Tags from '../components/Tags'
-import Body from '../components/Body'
+import Body from '../components/body'
 
 const PostTemplate = ({data}) => {
 

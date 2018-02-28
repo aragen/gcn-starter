@@ -5,35 +5,51 @@ import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
 
+import { Card, Divider, Grid, Icon, Image, Header } from 'semantic-ui-react';
+
 const Index = ({data}) =>  {
 
   const posts = data.allContentfulPost.edges;
 
   return (
-    <div>
+    <section>
 
-      <section>
+      <header style={{marginTop: '5rem'}}>
+        <Header as='h1' textAlign='center'>
+          Made with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a>, <a href="https://www.contentful.com/" target="_blank">Contentful</a> and <a href="https://www.netlify.com/" target="_blank">Netlify</a> <span>🎉</span>
+        </Header>
+      </header>
 
-        <header>
-          <h1>A blog made with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a>, <a href="https://www.contentful.com/" target="_blank">Contentful</a> and <a href="https://www.netlify.com/" target="_blank">Netlify</a> <span>🎉</span></h1>
-        </header>
+      <Divider section hidden />
 
-        {posts && (
-          <ul>
-             {posts.map(({ node: post, index }) => (
-                <li key={post.id}>
-                  <Link to={`/posts/${post.slug}/`}>
-                    <img sizes={post.heroImage.sizes} backgroundColor={'#EEEEEE'} />
-                    <h3>{post.title}</h3>
-                  </Link>
-                </li>
-             ))}
-          </ul>
-        )}
+      <Grid>
+        <Grid.Row>
+        {posts.map(({ node: post, index }) => (
+          <Grid.Column mobile={12} tablet={12} computer={12} key={post.id} style={{margin: '1rem 0'}}>
+            <Link to={`/posts/${post.slug}/`}>
+              <Card fluid>
+                <Img sizes={post.heroImage.sizes} />
+                <Card.Content>
+                  <Card.Header>
+                    {post.title}
+                  </Card.Header>
+                  <Card.Meta>
+                    <span className='date'>
+                      Joined in 2015
+                    </span>
+                  </Card.Meta>
+                  <Card.Description>
+                    Matthew is a musician living in Nashville.
+                  </Card.Description>
+                </Card.Content>
+              </Card>
+            </Link>
+          </Grid.Column>
+        ))}
+        </Grid.Row>
+      </Grid>
 
-      </section>
-
-    </div>
+    </section>
   )
 }
 
