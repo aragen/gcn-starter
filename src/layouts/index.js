@@ -1,9 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
-import globals from '../styles/global'
-import theme from '../styles/theme'
-import Menu from '../components/Menu'
+import Navigation from '../components/Navigation'
 import Footer from '../components/Footer';
 import favicon from '../images/favicon.ico'
 
@@ -30,8 +28,9 @@ const Template = ({ children }) => {
         </Helmet>
 
         <Container text>
+          <Navigation />
           {children()}
-          <Footer/>
+          <Footer />
         </Container>
 
       </div>
