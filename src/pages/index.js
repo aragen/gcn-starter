@@ -14,7 +14,9 @@ const Index = ({data}) =>  {
   return (
     <section>
 
-      <header style={{marginTop: '5rem'}}>
+      <Divider section hidden />
+
+      <header>
         <Header as='h1' textAlign='center'>
           Made with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a>, <a href="https://www.contentful.com/" target="_blank">Contentful</a> and <a href="https://www.netlify.com/" target="_blank">Netlify</a> <span>🎉</span>
         </Header>
