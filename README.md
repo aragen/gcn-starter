@@ -36,28 +36,6 @@ module.exports = {
 };
 ```
 
-### Styled Components Theme and Colors
-
-Edit `/src/styles/theme.js`
-
-```
-const theme = {
-  colors: {
-    base: '#121212',
-    secondary: '#f1f1f1',
-    highlight: '#5b8bf7'
-  },
-  sizes: {
-    maxWidth: '1200px',
-    maxWidthCentered: '650px'
-  },
-  responsive: {
-    small: '35em',
-    medium: '50em',
-    large: '70em'
-  }
-};
-```
 
 ## Deployment
 
@@ -66,7 +44,6 @@ const theme = {
 1. Run `gatsby build`
 
 2. Drag and drop the folder `/public/` into Netlify
-
 
 
 ### Netlify Deployment From Git (Recommended)
